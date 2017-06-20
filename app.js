@@ -13,8 +13,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 function renderFoodBlog(res,message) {
-	foodblog.findAll().then(function(title){
-		res.render("FoodBlog", {
+	foodblog.findAll().then(function(title) {
+		res.render("foodblog", {
 				title: title,
 				body: message,
 		});

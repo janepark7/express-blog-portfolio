@@ -15,12 +15,12 @@ router.get("/", function(req, res){
 	});
 });
 
-router.get("/foodblog", function (req, res){
-	res.render("template", {
-		page: "foodblog",
-		data: null,
-	});
-});
+// router.get("/foodblog", function (req, res){
+// 	res.render("template", {
+// 		page: "foodblog",
+// 		data: null,
+// 	});
+// });
 
 router.get("/form", function (req, res){
 	res.render("template", {
