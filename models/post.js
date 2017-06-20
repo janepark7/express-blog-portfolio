@@ -1,12 +1,12 @@
-const sql = require("../utility/sql");
 const Sequelize = require("sequelize");
+const sql = require("../util/sql");
 
-module.exports = sql.define("post", {
+module.exports = sql.define("foodblog", {
 	id: {
-			type: Sequelize.INTERGER,
+			type: Sequelize.INTEGER,
 			autoIncrement: true,
 			primaryKey: true,
-},
+		},
 
 	subject: {
 			type: Sequelize.STRING(100),
@@ -14,8 +14,8 @@ module.exports = sql.define("post", {
 		},
 
 	body: {
-		type: Sequelize.STRONG(5000),
+		type: Sequelize.STRING(5000),
 		allowNull: true,
 	},
 
-	});
+});
