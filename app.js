@@ -2,44 +2,50 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const indexRoutes = require("./routes/index.js");
-const foodblog = require("./util/foodblog.js");
 const sql = require("./util/sql.js");
-const foodblogpost = require("./models/post.js");
+const indexRoutes = require("./routes/index.js");
+const blog = require("./models/blog.js");
 
 app.set("view engine", "ejs");
 app.use(express.static("assets"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-function renderFoodBlog(res,message) {
-	foodblog.findAll().then(function(title) {
-		res.render("foodblog", {
+function renderBlog(res, body) {
+	blog.findAll().then(function(title) {
+		res.render("blog", {
 				title: title,
-				body: message,
+				body: body,
 		});
 	});
 }
 
-app.use("/", indexRoutes);
+app.get("/", function(req, res) {
+	res.render("index");
+});
 
 app.get("/form", function(req, res) {
 	res.render("form");
 });
 
-app.post("/foodblog", function(req, res) {
-	foodblog.create({
+
+app.post("/blog", function(req, res) {
+	blog.create({
 		title: req.body.title,
-		body: req.body.message,
+		body: req.body.body,
 	})
 	.then(function() {
-			renderFoodBlog(res);
+			renderBlog(res);
 	});
 });
 
-app.get("*", function (req, res) {
-	res.send('<img src="/css/images/bowie.jpg">');
+app.get("/blog", function(req, res) {
+	renderBlog(res);
 });
+
+// app.get("*", function (req, res) {
+// 	res.send('<img src="/css/images/bowie.jpg">');
+// });
 
 sql.sync().then(function() {
 	console.log("Database initialized!");

@@ -18,4 +18,5 @@ module.exports = sql.define("foodblog", {
 		allowNull: true,
 	},
 
+
 });

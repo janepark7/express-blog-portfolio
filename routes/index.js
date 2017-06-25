@@ -15,17 +15,17 @@ router.get("/", function(req, res){
 	});
 });
 
-// router.get("/foodblog", function (req, res){
-// 	res.render("template", {
-// 		page: "foodblog",
-// 		data: null,
-// 	});
-// });
+router.get("/foodblog", function (req, res){
+	res.render("template", {
+		page: "foodblog",
+		data: true,
+	});
+});
 
 router.get("/form", function (req, res){
 	res.render("template", {
 		page: "form",
-		data: null,
+		data: true,
 	});
 });
 

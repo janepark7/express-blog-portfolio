@@ -1,13 +1,13 @@
-const Post = require("../models/post.js");
+const Blog = require("../models/foodblogpost.js");
 
-const foodBlog = {
+const foodblog = {
 	getAll: function() {
-		Post.findAll();
+		return Blog.findAll();
 	},
 
 	add: function(post) {
-			return Post.create({name: post});
+			return Blog.create({name: foodblog});
 	},
 };
 
-module.exports = foodBlog;
+module.exports = foodblog;
