@@ -1,0 +1,56 @@
+h1 {
+	padding-top: 30px;
+	padding-bottom: 20px;
+	font-size: 50px;
+	font-family: "Arial", Georgia, Serif;
+	font-weight: bold;
+	text-align: center;
+}
+
+div.form {
+	display: block;
+	text-align: center;
+	float: left;
+	position: relative;
+
+
+}
+
+form {
+	display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+input[type=text] {
+	width: 100%;
+	padding: 12px 50px;
+	margin: 8px 0;
+	float: left;
+}
+
+textarea {
+	width: 250%;
+	height: 50%;
+}
+
+img {
+	padding-left: 15px;
+	margin: 0 0 10px 10px;
+	float: left;
+	width: 350px;
+	height: 275px;
+	object-fit: contain;
+	float: left;
+	position: relative;
+}
+
+button {
+	width: 200px;
+	height: 40px;
+	font-size: 25px;
+	font-weight: bold;
+	color: white;
+	background-color: green;
+}

@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/imagegallery", function (req, res){
-	res.render("template", {
-		page: "imagegallery",
-		data: null,
-	});
-});
+// router.get("/imagegallery", function (req, res){
+// 	res.render("template", {
+// 		page: "imagegallery",
+// 		data: null,
+// 	});
+// });
 
 router.get("/", function(req, res){
 	res.render("template", {
@@ -16,14 +16,14 @@ router.get("/", function(req, res){
 });
 
 router.get("/foodblog", function (req, res){
-	res.render("template", {
+	res.render("foodblog",{
 		page: "foodblog",
 		data: true,
 	});
 });
 
 router.get("/form", function (req, res){
-	res.render("template", {
+	res.render("form",{
 		page: "form",
 		data: true,
 	});
