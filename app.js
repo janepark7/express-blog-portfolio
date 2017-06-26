@@ -2,14 +2,15 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const sql = require("./util/sql.js");
 const indexRoutes = require("./routes/index.js");
 const blog = require("./models/blog.js");
+const sql = require("./util/sql.js");
 
 app.set("view engine", "ejs");
 app.use(express.static("assets"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use("/", indexRoutes);
 
 function renderBlog(res, body) {
 	blog.findAll().then(function(title) {

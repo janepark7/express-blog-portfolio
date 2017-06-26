@@ -9,12 +9,12 @@ module.exports = sql.define("foodblog", {
 		},
 
 	subject: {
-			type: Sequelize.STRING(100),
+			type: Sequelize.STRING(50),
 			allowNull: true,
 		},
 
 	body: {
-		type: Sequelize.STRING(5000),
+		type: Sequelize.STRING(500),
 		allowNull: true,
 	},
 
