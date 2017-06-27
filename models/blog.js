@@ -10,7 +10,7 @@ module.exports = sql.define("foodblog", {
 
 	subject: {
 			type: Sequelize.STRING(50),
-			allowNull: false,
+			allowNull: true,
 		},
 
 	body: {

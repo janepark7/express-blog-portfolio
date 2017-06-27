@@ -32,7 +32,7 @@ app.get("/form", function(req, res) {
 
 app.post("/blog", function(req, res) {
 	blog.create({
-		title: req.body.title,
+		subject: req.body.title,
 		body: req.body.body,
 	})
 	.then(function() {

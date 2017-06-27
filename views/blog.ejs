@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="./css/resets.css">
-		<link rel="stylesheet" type="text/css" href="./css/style.css">
+		<link rel="stylesheet" type="text/css" href="./css/blogstyle.css">
 		<title>Let's Eat!</title>
 	</head>
 	<body>
@@ -9,15 +9,24 @@
 <h1>Let's Eat!</h1>
 
 <p>
-A food blog about the World's famous past time.....EATING! Let's discuss our
-favorite eats!
+	<div class="intro">
+Let's Eat! is a food blog of my favorite places and / or things to eat! Whether
+it's my favorite restaurant, grab-n-go, or something I create at home. These are
+my favorites I want to share with you.
+	</div>
 </p>
 
+	<p2>
+		<div class="post">
 <% for (let i = 0; i < title.length; i++) { %>
-	<%= title[i].id %>
-	<%= title[i].title %>
-	<%= title[i].body %>
-	<%= title[i].created %>
+	<!-- <%= title[i].id %> -->
+	<div class="title"><%= title[i].subject %></div>
+	<!-- ^^WHY AREN'T YOU SHOWING UP?!?!?!?! -->
+	<div class="body"><%= title[i].body %></div>
+	<div class="timestamp"><%= title[i].createdAt %></div>
+	<!-- ^^WHY AREN'T YOU SHOWING UP?!?!?!?! -->
 <% } %>
+	</div>
+</p2>
 
 </html>

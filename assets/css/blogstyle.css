@@ -1,0 +1,26 @@
+h1 {
+	padding-top: 30px;
+	padding-bottom: 20px;
+	font-size: 50px;
+	font-family: "Arial", Georgia, Serif;
+	font-weight: bold;
+	text-align: center;
+}
+
+.intro {
+	display: block;
+	background-color: red;
+	color: white;
+	padding: 15px 35px 20px 35px;
+	margin: 0 auto;
+}
+
+p1 {
+	padding-bottom: 25px;
+}
+
+body {
+	font-size: 19px;
+	text-align: center;
+
+}
