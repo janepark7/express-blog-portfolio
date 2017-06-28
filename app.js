@@ -25,6 +25,8 @@ app.get("/", function(req, res) {
 	res.render("index");
 });
 
+//	To create / post blog entries
+
 app.get("/form", function(req, res) {
 	res.render("form");
 });

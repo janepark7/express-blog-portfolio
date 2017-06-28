@@ -7,6 +7,8 @@
 	<body>
 
 <h1>Let's Eat!</h1>
+<p>
+	<img src="angelburger.jpg">
 
 <p>
 	<div class="intro">
@@ -18,15 +20,14 @@ my favorites I want to share with you.
 
 	<p2>
 		<div class="post">
-<% for (let i = 0; i < title.length; i++) { %>
-	<!-- <%= title[i].id %> -->
-	<div class="title"><%= title[i].subject %></div>
-	<!-- ^^WHY AREN'T YOU SHOWING UP?!?!?!?! -->
-	<div class="body"><%= title[i].body %></div>
-	<div class="timestamp"><%= title[i].createdAt %></div>
-	<!-- ^^WHY AREN'T YOU SHOWING UP?!?!?!?! -->
-<% } %>
-	</div>
+			<div class="wrap">
+				<% for (let i = 0; i < title.length; i++) { %>
+				<div class="title"><%= title[i].subject %></div>
+				<div class="entry"><%= title[i].body %></div>
+				<div class="timestamp"><%= title[i].createdAt %></div>
+				<% } %>
+			</div>
+		</div>
 </p2>
 
 </html>

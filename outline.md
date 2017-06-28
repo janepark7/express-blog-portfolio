@@ -16,7 +16,7 @@ from a postgres database.
 
 ```json
 {
-"id": label posts
+"id": number of entries posted (this will probably get hidden)
 "title": the subject of the blog posts
 "body": descriptive rants about posts
 "timestamp": shows the time and date of blog post
@@ -25,26 +25,31 @@ from a postgres database.
 ## Routes
 ### GET `/`
 
-| Argument   | Description                        |
-|------------|------------------------------------|
-|'portfolio' | main page displaying bio, projects |
-
 * The main page of my portfolio
-* Display bio and projects
-* Projects will be presented in thumbnail images and be linked
+* Display bio and blog
+* Will link blog on the main page
 
-### GET `/foodblog`
+### GET `/form`
 
-| Argument   | Description                          |
-|------------|--------------------------------------|
-| 'foodblog' | blog displays anything food related  |
+No arguments
 
-### POST '/foodblog'
+* Displays a form for creating a post about food, includes subject and body
+* Upon submitting, Posts to /blog with data from the form
+
+
+### POST `/blog`
 
 | Argument    | Description                          |
 |-------------|--------------------------------------|
 | `title`     | subject of the post |
-| `body`      | emphasis on posts inserting texts, links, or images|
+| `body`      | can emphasis on description of subject|
+| `timestamp` | timestamp posted to show when entry was created |
+
+### GET `/blog`
+
+| Argument    | Description    |
+|-------------|----------------|
+| No Arguments| No Arguments
 
 ## Inspiration
 
@@ -57,5 +62,7 @@ The following food blogs is what I like in terms of content and aestetic:
 
 Portfolio Layout
 
-*[Catherine Meyer] (http://www.catherinecodes.com) - my friend's website. i would like to model my porfolio after her website
-*[Randle Browning] (https://www.randlebrowning.com/) - i find this layout interesting, reminds me of one of the layouts from tumblr.
+* [Catherine Meyer] (http://www.catherinecodes.com) - my friend's website. i would like to model my porfolio after her website
+* [Randle Browning] (https://www.randlebrowning.com/) - i find this layout interesting, reminds me of one of the layouts from tumblr.
+
+Heroku link: https://port-blog.herokuapp.com/
