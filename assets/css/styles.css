@@ -1,86 +1,94 @@
-{
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+/*CSS for Template*/
 
-.topnov {
-	overflow: hidden;
-	background-color: black;
-}
-
-.topnav a{
-	float: left;
-	display: block;
-	color: grey;
+#header {
+	padding-top: 8px;
+	font-size: 50px;
 	text-align: center;
-	padding: 14px 16px;
+}
+
+.navbar {
+	overflow: hidden;
+	font-family: arial;
+	font-weight: bold;
+	background-color: #20B2AA;
+	color: #FF00FF;
+	max-width: 800px;
+  margin: auto;
+}
+
+.navbar a {
+	float: inherit;
+	display: block;
+	text-align: center;
+	padding: 10px 11px;
 	text-decoration: none;
 	font-size: 17px;
 }
 
-.topnav a: hover {
+.navbar a:hover {
+	background-color:#B0C4DE;
+	color: #FF00FF;
+}
+
+.navbar a.active {
 	background-color: pink;
-	color: grey;
+	color: silver;
 }
 
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+#footer {
+	text-align: center;
+	bottom: 0px;
+	width: 100%;
+	position: fixed;
+	/*margin-top: 40%;*/
 }
 
-body {
+/*CSS for Portfolio Page*/
+
+#portbody {
 	color: #778899;
 	margin: 50px 70px 90px 110px;
-}
-
-h1, h2, h3 {
-  text-align: center;
-	font-family: cursive, times new roman, serif;
+	font-family: arial;
+	font-size: 15px;
 }
 
 h1 {
   color: #778899;
 }
 
-div {
-	align-content: center;
-	width: 900px;
+#profile {
+  width: 200px;
+  height: 250px;
+	display: block;
+  margin: 0 auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	object-fit: contain;
+	position: relative;
+}
+
+.bio_para {
+	position: relative;
+	width: 100%;
+	background-color: #A3E4D7;
+}
+
+.container {
+	position: absolute;
+	width: 100%;
 	padding-top: 8px;
 	padding-bottom: 8px;
-	margin: 0 auto;
-	background-color: #A3E4D7;
+	max-width: 500px;
+	margin-top: 5%;
+	margin-left: 25%;
+	display: inline-block;
+	text-align: center;
 }
 
 p {
   text-align: center;
 }
 
-img {
-	align-content: center;
-  width: 200px;
-  height: 250px;
-	font-size: 25px;
-}
 a {
     color: #000000;
     text-decoration: none;
@@ -88,4 +96,118 @@ a {
 
 p2 {
 	padding-bottom: 80px;
+}
+
+/*CSS for Form*/
+
+#postheader {
+	padding-top: 30px;
+	padding-bottom: 20px;
+	font-size: 50px;
+	font-family: "Arial", Georgia, Serif;
+	font-weight: bold;
+	text-align: center;
+}
+
+div.form {
+	display: block;
+	text-align: center;
+	float: left;
+	position: relative;
+}
+
+form {
+	display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+input[type=text] {
+	width: 100%;
+	padding: 12px 50px;
+	margin: 8px 0;
+	float: left;
+}
+
+textarea {
+	width: 250%;
+	height: 50%;
+}
+
+#foodpost {
+	padding-left: 15px;
+	margin: 0 0 10px 10px;
+	float: left;
+	width: 350px;
+	height: 275px;
+	object-fit: contain;
+	position: relative;
+}
+
+button {
+	width: 200px;
+	height: 40px;
+	font-size: 25px;
+	font-weight: bold;
+	color: white;
+	background-color: green;
+}
+
+/*CSS for Blog*/
+#bloghead {
+	padding-top: 30px;
+	padding-bottom: 5px;
+	font-size: 50px;
+	font-family: "Arial", Georgia, Serif;
+	font-weight: bold;
+	text-align: center;
+}
+
+.intro {
+	display: block;
+	color: black;
+	padding: 15px 55px 20px 55px;
+	margin: 0 auto;
+}
+
+#burgerangel {
+	padding: 10px 10px 15px 10px;
+	object-fit: contain;
+	width: 350px;
+	height: 275px;
+}
+
+body {
+	font-size: 19px;
+	text-align: center;
+	padding: 1px 50px 20px 50px;
+	background-color: white;
+}
+
+.post {
+	text-align: left;
+	padding: 10px 50px 10px 50px;
+	background-color: #336600;
+	color: white;
+}
+
+.title {
+font-size: 32px;
+font-family: arial;
+padding: 4px 0 4px 0;
+font-weight: bold;
+color: pink;
+
+}
+
+.entry {
+font-size: 20px;
+}
+
+.timestamp {
+	font-size: 9px;
+	font-style: italic;
+	padding: 8px 0 12px 0;
+	color: orange;
 }
